@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <script type="application/shiny-singletons">12b42a8f0f7c798243d223ce8cf7a0d518f6c50a</script>
+  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.12.4];shiny[1.0.3.9002];ionrangeslider[2.1.6];strftime[0.9.2];bootstrap[3.3.7]</script>
+<script src="shared/json2-min.js"></script>
+<script src="shared/jquery.min.js"></script>
+<link href="shared/shiny.css" rel="stylesheet" />
+<script src="shared/shiny.min.js"></script>
+<link href="shared/ionrangeslider/css/ion.rangeSlider.css" rel="stylesheet" />
+<link href="shared/ionrangeslider/css/ion.rangeSlider.skinShiny.css" rel="stylesheet" />
+<script src="shared/ionrangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="shared/strftime/strftime-min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="shared/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="shared/bootstrap/js/bootstrap.min.js"></script>
+<script src="shared/bootstrap/shim/html5shiv.min.js"></script>
+<script src="shared/bootstrap/shim/respond.min.js"></script>  <script src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <title>Ellipse Problem</title>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <script>if (window.MathJax) MathJax.Hub.Queue(["Typeset", MathJax.Hub]);</script>
+    <h2>Ellipse Problem</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <form class="well">
+          <p>The parimeter of an ellipse can not be determined exactly,
+        it must be approximated.  The purpose of this ap is to calculate 
+        the lenght of an arch formed from half an ellipse</p>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="a">Horizontal Axis</label>
+            <input class="js-range-slider" id="a" data-min="1" data-max="10" data-from="5" data-step="0.1" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="1.11111111111111" data-data-type="number"/>
+          </div>
+          <div class="form-group shiny-input-container">
+            <label class="control-label" for="b">Vertical Axis</label>
+            <input class="js-range-slider" id="b" data-min="1" data-max="10" data-from="5" data-step="0.1" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="," data-prettify-enabled="true" data-keyboard="true" data-keyboard-step="1.11111111111111" data-data-type="number"/>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-8">
+        <p>These sliders calclate the length of the arch. Move the sliders to input 
+  the horizontal and axes of the ellipse.</p>
+        <p>Reference: Math is Fun, Perimeter of an ellipse: 
+<a href="https://www.mathsisfun.com/geometry/ellipse-perimeter.html">https://www.mathsisfun.com/geometry/ellipse-perimeter.html</a> <br/>
+I used Ramanjan&#39;s first approximation:
+\[ p \approx \pi \biggl[3(a+b)- \sqrt{(3a+b)(a+3b)} \biggl] \]</p>
+
+        <p>The lenght of the arch is half of the perimeter of the ellipse (p/2).</p>
+        <div id="perim" class="shiny-text-output"></div>
+        <div id="ellipsePlot" class="shiny-plot-output" style="width: 100% ; height: 400px"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
