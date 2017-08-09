@@ -1,0 +1,11 @@
+---
+title: 
+author: 
+date: "August 9, 2017"
+output: html_document
+runtime: shiny
+---
+Reference: Math is Fun, Perimeter of an ellipse: 
+https://www.mathsisfun.com/geometry/ellipse-perimeter.html <br/>
+I used Ramanjan's first approximation:
+$$ p \approx \pi \biggl[3(a+b)- \sqrt{(3a+b)(a+3b)} \biggl] $$
